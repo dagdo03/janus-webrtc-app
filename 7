@@ -1,0 +1,406 @@
+[janus] Logger plugins folder: /usr/local/lib/janus/loggers
+[janus] [WARN] 	Couldn't access logger plugins folder...
+---------------------------------------------------
+  Starting Meetecho Janus (WebRTC Server) v1.3.0
+---------------------------------------------------
+
+Checking command line arguments...
+[janus] [janus.jcfg]
+[janus]     general: {
+[janus]         configs_folder: /usr/local/etc/janus
+[janus]         plugins_folder: /usr/local/lib/janus/plugins
+[janus]         transports_folder: /usr/local/lib/janus/transports
+[janus]         events_folder: /usr/local/lib/janus/events
+[janus]         loggers_folder: /usr/local/lib/janus/loggers
+[janus]         debug_level: 5
+[janus]         debug_colors: true
+[janus]         log_prefix: [janus] 
+[janus]         admin_secret: janusoverlord
+[janus]         protected_folders: [
+[janus]             /bin
+[janus]             /boot
+[janus]             /dev
+[janus]             /etc
+[janus]             /initrd
+[janus]             /lib
+[janus]             /lib32
+[janus]             /lib64
+[janus]             /proc
+[janus]             /sbin
+[janus]             /sys
+[janus]             /usr
+[janus]             /var
+[janus]             /opt/janus/bin
+[janus]             /opt/janus/etc
+[janus]             /opt/janus/include
+[janus]             /opt/janus/lib
+[janus]             /opt/janus/lib32
+[janus]             /opt/janus/lib64
+[janus]             /opt/janus/sbin
+[janus]         ]
+[janus]         log_to_file: no
+[janus]     }
+[janus]     certificates: {
+[janus]     }
+[janus]     media: {
+[janus]         ipv6: false
+[janus]         rtp_port_range: 20000-40000
+[janus]     }
+[janus]     nat: {
+[janus]         nice_debug: false
+[janus]         ice_ignore_list: vmnet
+[janus]     }
+[janus]     plugins: {
+[janus]     }
+[janus]     transports: {
+[janus]     }
+[janus]     loggers: {
+[janus]     }
+[janus]     events: {
+[janus]         broadcast: true
+[janus]         disable: libjanus_sampleevh.so,libjanus_wsevh.so,libjanus_gelfevh.so
+[janus]     }
+Debug/log level is 5
+Debug/log timestamps are disabled
+Debug/log colors are enabled
+[janus] Adding 'vmnet' to the ICE ignore list...
+[janus] Selecting local IP address...
+[janus] Using 192.168.1.27 as local IP...
+[janus] Token based authentication disabled
+[janus] Initializing recorder code
+[janus] RTP port range: 20000 -- 40000
+[janus] Initializing ICE stuff (Full mode, ICE-TCP candidates disabled, half-trickle, IPv6 support disabled)
+[janus] ICE port range: 20000-40000
+[janus] TURN REST API backend: (disabled)
+[janus] [33m[WARN][0m Janus is deployed on a private address (192.168.1.27) but you didn't specify any STUN server! Expect trouble if this is supposed to work over the internet and not just in a LAN...
+[janus] Using certificates:
+	(null)
+	(null)
+[janus] Crypto: OpenSSL >= 1.1.0
+[janus] No cert/key specified, autogenerating some...
+[janus] Generating DTLS key / cert
+[janus] Fingerprint of our certificate: 42:7C:5A:31:8C:66:14:73:4D:70:84:73:54:BC:81:9C:67:9B:BD:BD:9D:B2:2A:D2:45:A5:2C:EA:A4:B1:5D:2D
+[janus] [33m[WARN][0m Data Channels support not compiled
+[janus] Joining RTCP thread for RTP forwarders...
+[janus] Event handler plugins folder: /usr/local/lib/janus/events
+[janus] Joining Janus requests handler thread
+[janus] [33m[WARN][0m Event handler plugin 'libjanus_wsevh.so' has been disabled, skipping...
+[janus] [33m[WARN][0m Event handler plugin 'libjanus_gelfevh.so' has been disabled, skipping...
+[janus] [33m[WARN][0m Event handler plugin 'libjanus_sampleevh.so' has been disabled, skipping...
+[janus] Sessions watchdog started
+[janus] Plugins folder: /usr/local/lib/janus/plugins
+[janus] Loading plugin 'libjanus_recordplay.so'...
+[janus] Joining Events handler thread
+[janus] JANUS Record&Play plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.recordplay.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.recordplay.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.plugin.recordplay), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.recordplay.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.recordplay.cfg'... error 2 (No such file or directory)
+[janus] [35m[FATAL][0m [plugins/janus_recordplay.c:janus_recordplay_init:822] No recordings path specified, giving up...
+[janus] [33m[WARN][0m The 'janus.plugin.recordplay' plugin could not be initialized
+[janus] Loading plugin 'libjanus_echotest.so'...
+[janus] JANUS EchoTest plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.echotest.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.echotest.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.plugin.echotest), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.echotest.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.echotest.cfg'... error 2 (No such file or directory)
+[janus] JANUS EchoTest plugin initialized!
+[janus] 	Version: 7 (0.0.7)
+[janus] 	   [janus.plugin.echotest] JANUS EchoTest plugin
+[janus] 	   This is a trivial EchoTest plugin for Janus, just used to showcase the plugin interface.
+[janus] 	   Plugin API version: 105
+[janus] Loading plugin 'libjanus_nosip.so'...
+[janus] Joining EchoTest handler thread
+[janus] JANUS NoSIP plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.nosip.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.nosip.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.plugin.nosip), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.nosip.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.nosip.cfg'... error 2 (No such file or directory)
+[janus] Local IP set to 192.168.1.27
+[janus] JANUS NoSIP plugin initialized!
+[janus] 	Version: 1 (0.0.1)
+[janus] 	   [janus.plugin.nosip] JANUS NoSIP plugin
+[janus] 	   This is a simple RTP bridging plugin that leaves signalling details (e.g., SIP) up to the application.
+[janus] 	   Plugin API version: 105
+[janus] Loading plugin 'libjanus_audiobridge.so'...
+[janus] Joining NoSIP handler thread
+[janus] JANUS AudioBridge plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.audiobridge.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.audiobridge.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.plugin.audiobridge), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.audiobridge.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.audiobridge.cfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Denoising via RNNoise NOT supported
+[janus] Local IP set to 192.168.1.27
+[janus] JANUS AudioBridge plugin initialized!
+[janus] 	Version: 13 (0.0.13)
+[janus] 	   [janus.plugin.audiobridge] JANUS AudioBridge plugin
+[janus] 	   This is a plugin implementing an audio conference bridge for Janus, mixing Opus streams.
+[janus] 	   Plugin API version: 105
+[janus] Loading plugin 'libjanus_streaming.so'...
+[janus] Joining AudioBridge handler thread
+[janus] JANUS Streaming plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.streaming.jcfg
+[janus] [janus.plugin.streaming.jcfg]
+[janus]     general: {
+[janus]     }
+[janus]     rtsp-cctv2: {
+[janus]         type: rtsp
+[janus]         id: 88
+[janus]         description: CCTV Biasa
+[janus]         audio: false
+[janus]         video: true
+[janus]         url: rtsp://192.168.3.226:554/ch1/main
+[janus]         rtsp_user: admin
+[janus]         rtsp_pwd: HMCSNQ
+[janus]         rtsp_reconnect_delay: 5
+[janus]         rtsp_session_timeout: 0
+[janus]         rtsp_timeout: 10
+[janus]         rtsp_conn_timeout: 5
+[janus]     }
+[janus]     rtsp-bodycam: {
+[janus]         type: rtsp
+[janus]         id: 101
+[janus]         description: Body Cam
+[janus]         audio: true
+[janus]         video: true
+[janus]         url: rtsp://192.168.2.84:554/cam/realmonitor?channel=1&subtype=1
+[janus]         rtsp_user: admin
+[janus]         rtsp_pwd: admin123
+[janus]         rtsp_reconnect_delay: 5
+[janus]         rtsp_session_timeout: 0
+[janus]         rtsp_timeout: 10
+[janus]         rtsp_conn_timeout: 5
+[janus]     }
+[janus]     multistream-test: {
+[janus]         type: rtp
+[janus]         id: 123
+[janus]         description: Multistream test (1 audio, 2 video)
+[janus]         metadata: This is an example of a multistream mountpoint: you'll get an audio stream and two video feeds
+[janus]         media: [
+[janus]             {
+[janus]                 type: audio
+[janus]                 mid: a
+[janus]                 label: Audio stream
+[janus]                 port: 5102
+[janus]                 pt: 111
+[janus]                 codec: opus
+[janus]             }
+[janus]             {
+[janus]                 type: video
+[janus]                 mid: v1
+[janus]                 label: Video stream #1
+[janus]                 port: 5104
+[janus]                 pt: 100
+[janus]                 codec: vp8
+[janus]             }
+[janus]             {
+[janus]                 type: video
+[janus]                 mid: v2
+[janus]                 label: Video stream #2
+[janus]                 port: 5106
+[janus]                 pt: 100
+[janus]                 codec: vp8
+[janus]             }
+[janus]         ]
+[janus]         secret: janusoverlord
+[janus]     }
+[janus] Adding Streaming mountpoint 'rtsp-cctv2'
+[janus] Audio NOT enabled, Video enabled
+[janus] DESCRIBE answer:RTSP/1.0 401 Unauthorized
+CSeq: 1
+WWW-Authenticate: Digest realm="54d60d94aa92", nonce="ef1238234c38fb9e32b45e25f0691ca2", stale="FALSE"
+WWW-Authenticate: Basic realm="54d60d94aa92"
+Date:  Tue, Oct 01 2024 15:39:46 GMT
+
+RTSP/1.0 200 OK
+CSeq: 2
+Content-Type: application/sdp
+Content-Base: rtsp://192.168.3.226:554/ch1/main/
+Content-Length: 522
+
+v=0
+o=- 1727797186973454 1727797186973454 IN IP4 192.168.3.226
+s=Media Presentation
+e=NONE
+b=AS:5050
+t=0 0
+a=control:rtsp://192.168.3.226:554/ch1/main/
+m=video 0 RTP/AVP 96
+b=AS:5000
+a=control:rtsp://192.168.3.226:554/ch1/main/trackID=1
+a=rtpmap:96 H264/90000
+a=fmtp:96 profile-level-id=420029; packetization-mode=1; sprop-parameter-sets=Z00AKY2NQDwBE/LNwEBAUAAAu4AAFfkAQA==,aO44gA==
+a=Media_header:MEDIAINFO=494D4B48010100000400000100000000000000000000000000000000000000000000000000000000;
+a=appversion:1.0
+
+[janus] [rtsp-cctv2] Found sprop-parameter-sets: Z00AKY2NQDwBE/LNwEBAUAAAu4AAFfkAQA==,aO44gA==
+a=Media_header:MEDIAINFO=494D4B48010100000400000100000000000000000000000000000000000000000000000000000000
+[janus] SETUP answer:RTSP/1.0 200 OK
+CSeq: 3
+Session:       1443035935;timeout=20
+Transport: RTP/AVP/UDP;unicast;client_port=10002-10003;server_port=8208-8209;ssrc=3085479d;mode="play"
+Date:  Tue, Oct 01 2024 15:39:46 GMT
+
+
+[janus]   -- RTSP session timeout (video): 10000 ms
+[janus]   -- RTP port (video): 8208
+[janus]   -- RTCP port (video): 8209
+[janus]   -- SSRC (video): 814040989
+[janus] [33m[WARN][0m No c-line or source for RTSP video address, resolving server address...
+[janus]    -- 192.168.3.226
+[janus] RTSP video latching: 192.168.3.226:8208
+[janus]   -- RTCP: 192.168.3.226:8209
+[janus] Sending PLAY request...
+[janus] PLAY answer:RTSP/1.0 200 OK
+CSeq: 4
+Session:       1443035935
+RTP-Info: url=rtsp://192.168.3.226:554/ch1/main/trackID=1;seq=19332;rtptime=1750117626
+Date:  Tue, Oct 01 2024 15:39:47 GMT
+
+
+[janus] Adding Streaming mountpoint 'rtsp-bodycam'
+[janus] Audio enabled, Video enabled
+[janus] Starting streaming relay thread
+[janus] [rtsp-cctv2] New video stream! (#0, ssrc=814040989, index 0)
+[janus] SSRC changed, 0 --> 814040989
+[janus] [31m[ERR][0m [plugins/janus_streaming.c:janus_streaming_rtsp_connect_to_server:8123] Couldn't send DESCRIBE request: Couldn't connect to server (Failed to connect to 192.168.2.84 port 554 after 3114 ms: Couldn't connect to server)
+[janus] [31m[ERR][0m [plugins/janus_streaming.c:janus_streaming_init:2792] Error creating 'rtsp' mountpoint 'rtsp-bodycam'...
+[janus] Adding Streaming mountpoint 'multistream-test'
+[janus] [31m[ERR][0m [plugins/janus_streaming.c:janus_streaming_create_fd:7307] [multistream-test] Bind failed for audio (port 5102)... 98 (Address already in use)
+[janus] [31m[ERR][0m [plugins/janus_streaming.c:janus_streaming_create_rtp_source_stream:7503] [multistream-test] Can't bind to port 5102...
+[janus] [31m[ERR][0m [plugins/janus_streaming.c:janus_streaming_init:2261] Can't add 'audio' stream 'multistream-test', error creating source stream...
+[janus]   ::: [88][rtsp-cctv2] CCTV Biasa (live, RTP source, public, pin: no pin)
+[janus] JANUS Streaming plugin initialized!
+[janus] 	Version: 10 (0.0.10)
+[janus] 	   [janus.plugin.streaming] JANUS Streaming plugin
+[janus] 	   This is a streaming plugin for Janus, allowing WebRTC peers to watch/listen to pre-recorded files or media generated by an external source.
+[janus] 	   Plugin API version: 105
+[janus] Loading plugin 'libjanus_videoroom.so'...
+[janus] Joining Streaming handler thread
+[janus] JANUS VideoRoom plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.videoroom.jcfg
+[janus] [janus.plugin.videoroom.jcfg]
+[janus]     general: {
+[janus]     }
+[janus]     room-1234: {
+[janus]         description: Demo Room
+[janus]         secret: adminpwd
+[janus]         publishers: 6
+[janus]         bitrate: 128000
+[janus]         fir_freq: 10
+[janus]         record: false
+[janus]     }
+[janus] Adding VideoRoom room 'room-1234'
+[janus] Created VideoRoom: 1234 (Demo Room, public, opus/vp8 codecs, secret: adminpwd, pin: no pin, pvtid: optional)
+[janus]   ::: [1234][Demo Room] 128000, max 6 publishers, FIR frequency of 10 seconds, opus audio codec(s), vp8 video codec(s)
+[janus] JANUS VideoRoom plugin initialized!
+[janus] 	Version: 10 (0.0.10)
+[janus] 	   [janus.plugin.videoroom] JANUS VideoRoom plugin
+[janus] 	   This is a plugin implementing a videoconferencing SFU (Selective Forwarding Unit) for Janus, that is an audio/video router.
+[janus] 	   Plugin API version: 105
+[janus] Loading plugin 'libjanus_sip.so'...
+[janus] Joining VideoRoom handler thread
+[janus] JANUS SIP plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.sip.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.sip.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.plugin.sip), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.sip.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.sip.cfg'... error 2 (No such file or directory)
+[janus] Local IP set to 192.168.1.27
+[janus] Binding media address set to [any]...
+[janus] IP to advertise in SDP: 192.168.1.27
+[janus] [33m[WARN][0m sofia-sip logs are going to be redirected and they will not be shown in the process output
+[janus] Joining SIP handler thread
+[janus] JANUS SIP plugin initialized!
+[janus] 	Version: 9 (0.0.9)
+[janus] 	   [janus.plugin.sip] JANUS SIP plugin
+[janus] 	   This is a simple SIP plugin for Janus, allowing WebRTC peers to register at a SIP server and call SIP user agents through a Janus instance.
+[janus] 	   Plugin API version: 105
+[janus] Loading plugin 'libjanus_textroom.so'...
+[janus] JANUS TextRoom plugin created!
+[janus] [33m[WARN][0m Data channels support not compiled, disabling TextRoom plugin
+[janus] [33m[WARN][0m The 'janus.plugin.textroom' plugin could not be initialized
+[janus] Loading plugin 'libjanus_videocall.so'...
+[janus] JANUS VideoCall plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.videocall.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.videocall.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.plugin.videocall), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.plugin.videocall.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.plugin.videocall.cfg'... error 2 (No such file or directory)
+[janus] JANUS VideoCall plugin initialized!
+[janus] 	Version: 6 (0.0.6)
+[janus] 	   [janus.plugin.videocall] JANUS VideoCall plugin
+[janus] 	   This is a simple video call plugin for Janus, allowing two WebRTC peers to call each other through a server.
+[janus] 	   Plugin API version: 105
+[janus] Transport plugins folder: /usr/local/lib/janus/transports
+[janus] Loading transport plugin 'libjanus_websockets.so'...
+[janus] Joining VideoCall handler thread
+[janus] JANUS WebSockets transport plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.transport.websockets.jcfg
+[janus] [janus.transport.websockets.jcfg]
+[janus]     general: {
+[janus]         json: indented
+[janus]         ws: true
+[janus]         ws_port: 8188
+[janus]         wss: false
+[janus]     }
+[janus]     admin: {
+[janus]         admin_ws: true
+[janus]         admin_ws_port: 7188
+[janus]         admin_wss: false
+[janus]     }
+[janus]     cors: {
+[janus]         allow_origin: *
+[janus]     }
+[janus]     certificates: {
+[janus]     }
+[janus] libwebsockets logging: 0
+[janus] Restricting Access-Control-Allow-Origin to '*'
+[janus] [35m[FATAL][0m [transports/janus_websockets.c:janus_websockets_create_ws_server:501] Error creating vhost for Websockets server...
+[janus] Secure Websockets server disabled
+[janus] [35m[FATAL][0m [transports/janus_websockets.c:janus_websockets_create_ws_server:501] Error creating vhost for Admin Websockets server...
+[janus] Secure Admin Websockets server disabled
+[janus] [33m[WARN][0m No WebSockets server started, giving up...
+[janus] [33m[WARN][0m The 'janus.transport.websockets' plugin could not be initialized
+[janus] Loading transport plugin 'libjanus_pfunix.so'...
+[janus] JANUS Unix Sockets transport plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.transport.pfunix.jcfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.transport.pfunix.jcfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m Couldn't find .jcfg configuration file (janus.transport.pfunix), trying .cfg
+[janus] Configuration file: /usr/local/etc/janus/janus.transport.pfunix.cfg
+[janus] [31m[ERR][0m [config.c:janus_config_parse:191]   -- Error reading configuration file 'janus.transport.pfunix.cfg'... error 2 (No such file or directory)
+[janus] [33m[WARN][0m No Unix Sockets server started, giving up...
+[janus] [33m[WARN][0m The 'janus.transport.pfunix' plugin could not be initialized
+[janus] Loading transport plugin 'libjanus_http.so'...
+[janus] JANUS REST (HTTP/HTTPS) transport plugin created!
+[janus] Configuration file: /usr/local/etc/janus/janus.transport.http.jcfg
+[janus] HTTP transport timer started
+[janus] [janus.transport.http.jcfg]
+[janus]     general: {
+[janus]         json: indented
+[janus]         base_path: /janus
+[janus]         http: true
+[janus]         port: 8088
+[janus]         https: false
+[janus]     }
+[janus]     admin: {
+[janus]         admin_base_path: /admin
+[janus]         admin_http: false
+[janus]         admin_port: 7088
+[janus]     }
+[janus]     cors: {
+[janus]     }
+[janus]     certificates: {
+[janus]     }
+[janus] Binding to all interfaces for the Janus API HTTP webserver
+[janus] [35m[FATAL][0m [transports/janus_http.c:janus_http_init:810] Couldn't start webserver on port 8088...
+[janus] HTTPS webserver disabled
+[janus] Admin/monitor HTTP webserver disabled
+[janus] Admin/monitor HTTPS webserver disabled
+[janus] [33m[WARN][0m No HTTP/HTTPS server started, giving up...
+[janus] [33m[WARN][0m The 'janus.transport.http' plugin could not be initialized
+[janus] [35m[FATAL][0m [janus.c:main:5906] No Janus API transport is available... enable at least one and restart Janus
